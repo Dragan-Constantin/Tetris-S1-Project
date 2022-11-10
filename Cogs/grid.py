@@ -3,7 +3,7 @@ import json
 
 with open('data/diamond.json') as f:
     data = json.load(f)
-    c_grid = data["circle"]
+    c_grid = data["diamond"]
 
 top = string.ascii_lowercase
 down = string.ascii_uppercase
