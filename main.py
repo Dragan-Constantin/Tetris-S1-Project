@@ -58,8 +58,8 @@ def play(g, s, score, best):
 # --- Get the Game Data
 # -----------------------------------------
 def getGameData():
-    # grid_type, grid_size, bloc_display = ("diamond", 3, 1)
-    grid_type, grid_size, bloc_display = display_menu()
+    grid_type, grid_size, bloc_display = ("diamond", 1, 1)
+    # grid_type, grid_size, bloc_display = display_menu()
     # var_display=f"\n   type: {grid_type}\n   size: {grid_size}\n   display: {bloc_display}"; print("mdata: {", var_display, "\n   }\n")
     grid = get_grid(grid_type, grid_size)
     sample_size = 3 if bloc_display == 1 else 10
