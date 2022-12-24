@@ -25,7 +25,6 @@
 It was written as a part of the S1 programming project at @EFREI-PARIS.<br>
 <ins>Fair Warning:</ins> This game is still in development and is prone to regular changes. Additionally, there are no garanties that this program will work on your machine.</div>
 
-`<br><br>`
 
 <h2 align="left">📜 License</h2>
 This program is registered under the following <a href="https://github.com/Dragan-Constantin/Tetris-S1-Project/blob/main/LICENSE" target="_blank">MIT License</a>.
