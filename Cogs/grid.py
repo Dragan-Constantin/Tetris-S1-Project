@@ -61,11 +61,20 @@ def check_grid(a, s):
             if check==True:
                 if i<len(a)-1:
                     for j in range(len(a[i])):
-                        if (a[i+1][j]==0 or a[i+1][j]==2) and a[i][j]==2: a[i][j]=1
-                        elif a[i+1][j]==1 and a[i][j]==2 and (i!=full):
-                            a[i+1][j]=2 ; a[i][j]=1
-                        elif a[i+1][j]==1 and a[i][j]==2 and (i==full):
-                            a[i+1][j]=1 ; a[i][j]=1
+                        if i==full:
+                            if a[i+1][j]==0 and a[i][j]==2:
+                                a[i][j]=1
+                            elif a[i+1][j]==2 and a[i][j]==2:
+                                a[i][j]=1
+                            elif a[i+1][j]==1 and a[i][j]==2:
+                                a[i+1][j]=1 ; a[i][j]=1
+                        if i!=full:
+                            if a[i+1][j]==0 and a[i][j]==2:
+                                a[i][j]=2
+                            elif a[i+1][j]==2 and a[i][j]==2:
+                                a[i+1][j]=2 ; a[i][j]=2
+                            elif a[i+1][j]==1 and a[i][j]==2:
+                                a[i+1][j]=2 ; a[i][j]=1
                 elif i==(len(a)-1):
                     for j in range(len(a[i])):
                         if a[i][j]==2: a[i][j]=1
