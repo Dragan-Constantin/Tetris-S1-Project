@@ -50,6 +50,22 @@ def get_coords(gsize):
 
 
 # -----------------------------------------
+# --- Check if line is full
+# -----------------------------------------
+def check_grid(a, score):
+    for i in range((len(a) - 1), -1, -1): score += 1 if all(item==0 or item==2 for item in a[i]) else 0
+    for i in range((len(a) - 1), -1, -1):
+        # for j in range(len(a[i])):
+        if  all(item == 0 or item == 2 for item in a[i]):
+            for k in range(i, -1, -1):
+                for l in range(len(a[k])):
+                    if a[k-1][l] == 0 and a[k][l]==2: a[k][l]=1
+                    elif a[k-1][l] == 1 and a[k][l]==2: a[k][l]=1
+                    elif a[k-1][l] == 2 and a[k][l]==1: a[k][l]=2
+    return a, score
+
+
+# -----------------------------------------
 # --- Add block to grid
 # -----------------------------------------
 def add_block(ogrid, block):
@@ -107,6 +123,7 @@ def display_blocks(block_list):
 # --- Display Grid
 # -----------------------------------------
 def show_grid(grid, sample, current_score, best_score):
+    grid, current_score = check_grid(grid, current_score)
     # clear the terminal
     clear()
     # transform the grid into symbols
