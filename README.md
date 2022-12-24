@@ -2,7 +2,7 @@
 
 <!-- <a href="https://github.com/Dragan-Constantin/Projet-Transverse-L1S2" target="_blank"><p align="center"> <img alt="GitPoint" title="GameTitle" src="https://avatars.githubusercontent.com/u/102966862?v=4" width="225"></p></a> -->
 
-<a href="https://github.com/Dragan-Constantin/Tetris-S1-Project" target="_blank"><p align="center"> <img alt="MainIcon" title="MainIcon" src="https://s3.amazonaws.com/tetris-www/assets/editorial/2020/07/tetris-logo.png" width="300"></p></a>
+<a href="https://github.com/Dragan-Constantin/Tetris-S1-Project" target="_blank"><p align="center"> <img alt="MainIcon" title="MainIcon" src="https://static.wikia.nocookie.net/maditsmadfunny/images/6/6b/Tetris-logo.png/revision/latest/scale-to-width-down/412?cb=20130223091331" width="300"></p></a>
 
 <p align="center"><b>A quick Tetris game<br>written in Python 3.10</b></p><br>
 
