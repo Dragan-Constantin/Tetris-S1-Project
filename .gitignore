@@ -2,6 +2,13 @@
 __pycache__/
 *.py[cod]
 *$py.class
+h_*.*
+t
+t_diamond1
+t2
+/files
+/.vscode
+
 
 # C extensions
 *.so
