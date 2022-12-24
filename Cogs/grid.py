@@ -52,55 +52,67 @@ def get_coords(gsize):
 # -----------------------------------------
 # --- Check if line is full
 # -----------------------------------------
-def check_grid(a, score):
-    for i in range((len(a) - 1), -1, -1): score += 1 if all(item==0 or item==2 for item in a[i]) else 0
-    for i in range((len(a) - 1), -1, -1):
-        # for j in range(len(a[i])):
-        if  all(item == 0 or item == 2 for item in a[i]):
-            for k in range(i, -1, -1):
-                for l in range(len(a[k])):
-                    if a[k-1][l] == 0 and a[k][l]==2: a[k][l]=1
-                    elif a[k-1][l] == 1 and a[k][l]==2: a[k][l]=1
-                    elif a[k-1][l] == 2 and a[k][l]==1: a[k][l]=2
-    return a, score
+def check_grid(a, s):
+    check=False
+    for line in range(len(a)-1, -1, -1):
+        for i in range(len(a)-1, -1, -1):
+            if all(item == 0 or item == 2 for item in a[i]):
+                check, full = True, i ; s+=1
+            if check==True:
+                if i<len(a)-1:
+                    for j in range(len(a[i])):
+                        if (a[i+1][j]==0 or a[i+1][j]==2) and a[i][j]==2: a[i][j]=1
+                        elif a[i+1][j]==1 and a[i][j]==2 and (i!=full):
+                            a[i+1][j]=2 ; a[i][j]=1
+                        elif a[i+1][j]==1 and a[i][j]==2 and (i==full):
+                            a[i+1][j]=1 ; a[i][j]=1
+                elif i==(len(a)-1):
+                    for j in range(len(a[i])):
+                        if a[i][j]==2: a[i][j]=1
+        check=False
+    return a, s
 
 
 # -----------------------------------------
 # --- Add block to grid
 # -----------------------------------------
-def add_block(ogrid, block):
-    cgrid = ogrid
-    size = len(ogrid[0])
+def add_block(ogrid, block, score):
+    cgrid = ogrid.copy()
+    size = len(cgrid[0])
     x, y = get_coords(size)
     x-=1; y-=1; k = len(block)-1; l = 0
-    while k > -1:
-        for i in range((len(cgrid) - 1), -1, -1):
-            if k == -1: break
-            l = 0
-            if i <= y and i >= 0:
-                for j in range(len(cgrid[i])):
-                    if len(block) > 1:
-                        if j >= x and j <= (x + len(block[0]) - 1):
-                            # print(i, j, k, l)
-                            if cgrid[i][j]==0 and block[k][l]!=0: raise InvalidBlockPos
-                            else: cgrid[i][j]+=block[k][l]
-                            # cgrid[i][j]+=block[k][l]
-                            if l < (len(block[0]) - 1):
-                                l += 1
-                    else:
-                        if j >= x and j <= (x + len(block[k]) - 1):
-                            # print(i, j, k, l)
-                            if cgrid[i][j]==0 and block[k][l]!=0: raise InvalidBlockPos
-                            else: cgrid[i][j]+=block[k][l]
-                            # cgrid[i][j]+=block[k][l]
-                            if l <= len(block[0]):
-                                l += 1
-                    if cgrid[i][j]>2:
-                        print(down[i], top[j])
-                        cgrid[i][j] = 1
-                        raise BlockOverlap
-                k-=1
-    return cgrid
+    try:
+        while k > -1:
+            for i in range((len(cgrid)-1), -1, -1):
+                if k == -1: break
+                l = 0
+                if i <= y and i >= 0:
+                    for j in range(len(cgrid[i])):
+                        if len(block) > 1:
+                            if j >= x and j <= (x + len(block[0]) - 1):
+                                # print(i, j, k, l)
+                                if cgrid[i][j]==0 and block[k][l]!=0: raise InvalidBlockPos
+                                else: cgrid[i][j]+=block[k][l]
+                                if l < (len(block[0]) - 1):
+                                    l += 1
+                        else:
+                            if j >= x and j <= (x + len(block[0]) - 1):
+                                # print(i, j, k, l)
+                                if cgrid[i][j]==0 and block[k][l]!=0: raise InvalidBlockPos
+                                else: cgrid[i][j]+=block[k][l]
+                                if l <= len(block[0]):
+                                    l += 1
+                        if cgrid[i][j]>2:
+                            # print(down[i], top[j])
+                            cgrid[i][j] = 2 # reset the bloc to 2
+                            raise BlockOverlap
+                    k-=1
+        res, score = check_grid(cgrid.copy(), score)
+        # res = cgrid
+        return res, 0, score
+    except (InvalidBlockPos, BlockOverlap) as e:
+        print(e)
+        return ogrid, 1, score
 
 
 # -----------------------------------------
@@ -108,7 +120,6 @@ def add_block(ogrid, block):
 # -----------------------------------------
 def display_blocks(block_list):
     arrays = [[[' ' if x == 0 else '■' for x in i] for i in array] for array in block_list]
-    line = 0
     lmax = max(len(array) for array in arrays)
     for line in range(lmax):
             for array in arrays:
@@ -123,13 +134,12 @@ def display_blocks(block_list):
 # --- Display Grid
 # -----------------------------------------
 def show_grid(grid, sample, current_score, best_score):
-    grid, current_score = check_grid(grid, current_score)
+    sgrid = grid.copy()
     # clear the terminal
     clear()
     # transform the grid into symbols
     d_grid = [[' ' if x == 0 else ('■' if x == 2 else '∙') for x in i] for i in grid]
     # display the grid in the terminal
-    # for i in range(0, len(grid)): print(*d_grid[i], sep=" ", end="\n")
     print("     ", end="")
     for i in range(0, len(d_grid[0])):
         if i==len(d_grid[0])-1: print(top[i], end=f"\t\tYour Score: {current_score}\n")
@@ -156,4 +166,4 @@ def show_grid(grid, sample, current_score, best_score):
     display_blocks(dBlocks)
     blockId = secInput("\nChoose a block among the following (1 being the first on the left)\nChoice: ")
     if 0 < blockId <= sample: return dBlocks[blockId - 1]
-    else: return show_grid(grid, sample, current_score, best_score)
+    else: return show_grid(sgrid, sample, current_score, best_score)
