@@ -7,20 +7,46 @@ from Cogs.functions import *
 
 
 # -----------------------------------------
-# --- list of all menus
+# --- list of all menus and variables
 # -----------------------------------------
 menu1 = ['Play', 'Tutorial', 'Scoreboard', 'Exit']
 menu2 = ['Diamond', 'Circle', 'Triangle (please don\'t)', 'Back', 'Exit']
 menu3 = ['Size 1', 'Size 2', 'Size 3', 'Back', 'Exit']
 menu4 = ['Display 3 random blocs', 'Display all blocs', 'Back', 'Exit']
+title = """     /\‾‾\         /\‾‾\         /\‾‾\         /\‾‾\                     /\‾‾\    
+     \:\  \       /::\  \        \:\  \       /::\  \        /\‾‾\      /::\  \   
+      \:\  \     /:/\:\  \        \:\  \     /:/\:\  \       \:\  \    /:/\ \  \  
+      /::\  \   /::\‾\:\  \       /::\  \   /::\‾\:\  \      /::\__\  _\:\‾\ \  \ 
+     /:/\:\__\ /:/\:\ \:\__\     /:/\:\__\ /:/\:\ \:\__\  __/:/\/__/ /\ \:\ \ \__\\
+    /:/  \/__/ \:\‾\:\ \/__/    /:/  \/__/ \/_|::\/:/  / /\/:/  /    \:\ \:\ \/__/
+   /:/  /       \:\ \:\__\     /:/  /         |:|::/  /  \::/__/      \:\ \:\__\  
+   \/__/         \:\ \/__/     \/__/          |:|\/__/    \:\__\       \:\/:/  /  
+                  \:\__\                      |:|  |       \/__/        \::/  /   
+                   \/__/                       \|__|                     \/__/    
+ """
+small_title = """   /\‾‾\     /\‾‾\     /\‾‾\     /'\‾‾\     /\‾‾\     /\‾‾\  
+   \ \  \   /  \  \    \ \  \   /   \  \   _\ \  \   /  \  \ 
+   /  \__\ /  \ \__\   /  \__\ /  /\ \__\ /\/  \__\ /\ \ \__\\
+  / /\/__/ \ \ \/  /  / /\/__/ \/\\\/ /  / \  /\/__/ \ \ \/__/
+ / /  /     \ \/  /  / /  /      |  /__/   \ \__\    \  /  / 
+ \/__/       \/__/   \/__/        \|__|     \/__/     \/__/  
+ """
 
 
 # -----------------------------------------
 # --- Game Over Screen
 # -----------------------------------------
 def gameOver(score, best):
-    print(f"\n\n  GAME OVER\nFinal Score: {score}\nBest Score: {best}")
-    time.wait(5)
+    gm = """    ___       ___       ___       ___            ___       ___       ___        ___   
+   /\  \     /\  \     /\__\     /\  \          /\  \     /\__\     /\  \     /'\  \  
+  /  \  \   /  \  \   / |_ |_   /  \  \        /  \  \   / / _/_   /  \  \   /   \  \ 
+ / /\ \__\ /  \ \__\ / /L \__\ /  \ \__\      / /\ \__\ |  L/\__\ /  \ \__\ /  /\ \__\\
+ \ \ \/__/ \/\  /  / \/_/ /  / \ \ \/  /      \ \/ /  / |    /  / \ \ \/  / \/\\\/ /  /
+  \  /  /    / /  /    / /  /   \ \/  /        \  /  /  |___/__/   \ \/  /    | \/__/ 
+   \/__/     \/__/     \/__/     \/__/          \/__/               \/__/      \|__|  
+ """
+    print(f"\n\n{gm}\nFinal Score: {score}\nBest Score: {best}")
+    time.sleep(5)
 
 
 # -----------------------------------------
@@ -28,6 +54,7 @@ def gameOver(score, best):
 # -----------------------------------------
 def pMenu(menu, msg=None):
     clear()
+    print(small_title)
     if msg!=None: print(msg)
     for index, item in enumerate(menu): print(f"{index+1}]- {item}")
     req = secInput("Choice: ")
@@ -39,7 +66,8 @@ def pMenu(menu, msg=None):
 # -----------------------------------------
 def welcomeScreen():
     clear()
-    print("\n\nTEXT-TRIS")
+    # print("\n\nTEXT-TRIS")
+    print(title)
     time.sleep(2)
     # mainMenu()  # redirects to the mainMenu() function
 
@@ -49,8 +77,33 @@ def welcomeScreen():
 # -----------------------------------------
 def exitScreen():
     clear()
-    print("\n\nTHANKS 4 PLAYING")
+    gm = """
+         ___       ___       ___       ___       ___       ___        
+        /\  \     /\__\     /\  \     /\__\     /\__\     /\  \       
+        \:\  \   /:/__/_   /::\  \   /:| _|_   /:/ _/_   /::\  \      
+        /::\__\ /::\/\__\ /::\:\__\ /::|/\__\ /::-"\__\ /\:\:\__\     
+       /:/\/__/ \/\::/  / \/\::/  / \/|::/  / \;:;-",-" \:\:\/__/     
+       \/__/      /:/  /    /:/  /    |:/  /   |:|  |    \::/  /      
+                  \/__/     \/__/     \/__/     \|__|     \/__/       
+                        ___       ___       ___                       
+                       /\  \     /\  \     /\  \                      
+                      /::\  \   /::\  \   /::\  \                     
+                     /::\:\__\ /:/\:\__\ /::\:\__\                    
+                     \/\:\/__/ \:\/:/  / \;:::/  /                    
+                        \/__/   \::/  /   |:\/__/                     
+                                 \/__/     \|__|                      
+    ___       ___       ___       ___       ___       ___       ___   
+   /\  \     /\__\     /\  \     /\__\     /\  \     /\__\     /\  \  
+  /::\  \   /:/  /    /::\  \   |::L__L   _\:\  \   /:| _|_   /::\  \ 
+ /::\:\__\ /:/__/    /::\:\__\  |:::\__\ /\/::\__\ /::|/\__\ /:/\:\__\\
+ \/\::/  / \:\  \    \/\::/  /  /:;;/__/ \::/\/__/ \/|::/  / \:\:\/__/
+    \/__/   \:\__\     /:/  /   \/__/     \:\__\     |:/  /   \::/  / 
+             \/__/     \/__/               \/__/     \/__/     \/__/  
+"""
+    # print("\n\nTHANKS 4 PLAYING")
+    print(f"\n\n{gm}\n")
     time.sleep(2)
+    clear()
     exit(0)
 
 
@@ -64,6 +117,7 @@ def mainMenu():
     match choice:
         case 1: return gridTypeMenu()
         case 2: return tutorialScreen()
+        case 3: return scoreboardScreen()
         case 4: exitScreen()
         case _: return mainMenu()
 
@@ -74,6 +128,16 @@ def mainMenu():
 def tutorialScreen():
     clear()
     print("this is a tutorial")
+    input("press enter to go back to the main menu")
+    mainMenu()
+
+
+# -----------------------------------------
+# --- ScoreBoard Screen
+# -----------------------------------------
+def scoreboardScreen():
+    clear()
+    with open("data/player.json", 'r') as f: print(f"Your best score: {json.load(f)['best']}")
     input("press enter to go back to the main menu")
     mainMenu()
 
