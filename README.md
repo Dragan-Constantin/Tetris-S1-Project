@@ -17,7 +17,7 @@
 
 <h2 align="left">About the game</h2>
 <div style="text-align: right">
-<i>Textris</i> is a CLI Tetris game written in Python 3.10 and using <i>insert specific libs</i>.
+This is a TUI Tetris-like game written in Python 3.10.
 It was written as a part of the S1 programming project at @EFREI-PARIS.<br>
 <ins>Fair Warning:</ins> This game is still in development and is prone to regular changes. Additionally, there are no garanties that this program will work on your machine.</div>
 
