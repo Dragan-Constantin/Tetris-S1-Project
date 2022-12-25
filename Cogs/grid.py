@@ -57,7 +57,7 @@ def check_grid(a, s):
     for line in range(len(a)-1, -1, -1):
         for i in range(len(a)-1, -1, -1):
             if all(item == 0 or item == 2 for item in a[i]):
-                check, full = True, i ; s+=1
+                check, full = True, i ; s+=(a[i].count(2))
             if check==True:
                 if i<len(a)-1:
                     for j in range(len(a[i])):
