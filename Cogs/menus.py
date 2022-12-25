@@ -1,3 +1,18 @@
+"""
+This module regroups multiple functions used throughout the project.
+It is responsible for handling the processing and display of menus in the game.
+It was created as part of a class project given to the first year
+students (L1) at EFREI Paris on november 2022.
+
+It will NOT be maintained by the authors.
+
+__authors__ = "Dragan Constantin (EFREI Promo 2027), Somphone Isabelle (EFREI Promo 2027)"
+__copyright__ = "Copyright (c) 2022 Dragan Constantin and Somphone Isabelle"
+__license__ = "MIT"
+__emails__ = ["constantin.dragan@efrei.net", "isabelle.somphone@efrei.net"]
+"""
+
+
 # included libraries
 import time
 import json
