@@ -11,7 +11,6 @@
 <h2 align="left">Downloads</h2>
 <p align="left">
   • <a href="link" target="_blank">Latest release</a><br>
-  • <a href="https://github.com/Dragan-Constantin/Tetris-S1-Project" target="_blank">Latest python version</a><br>
   • <a href="https://github.com/Dragan-Constantin/Tetris-S1-Project" target="_blank">Latest nightly build</a><br>
 </p>
 
