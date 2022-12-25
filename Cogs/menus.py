@@ -69,7 +69,6 @@ def welcomeScreen():
     # print("\n\nTEXT-TRIS")
     print(title)
     time.sleep(2)
-    # mainMenu()  # redirects to the mainMenu() function
 
 
 # -----------------------------------------
@@ -173,13 +172,13 @@ def gridSizeMenu():
         case 4: return gridTypeMenu()
         case 5: return exitScreen()
         case _: return gridSizeMenu()
-    if gsize!=None: blocMenu()
+    if gsize!=None: blockMenu()
 
 
 # -----------------------------------------
 # --- Bloc Display Menu
 # -----------------------------------------
-def blocMenu():
+def blockMenu():
     global bdisplay
     clear()
     choice=pMenu(menu4, msg="Choose how you want the next bloc(s) to be displayed:")
@@ -188,7 +187,7 @@ def blocMenu():
         case 2: bdisplay = 2
         case 3: return gridSizeMenu()
         case 4: return exitScreen()
-        case _: return blocMenu()
+        case _: return blockMenu()
 
 
 # -----------------------------------------
