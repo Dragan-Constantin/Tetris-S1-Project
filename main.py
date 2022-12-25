@@ -99,16 +99,16 @@ def getGameData():
 
 
 if __name__=="__main__":
-    cli = sys.argv
-    if len(cli)>=2:
+    cli = sys.argv #: gets the command line input from the terminal.
+    if len(cli)>=2: #: checks whether or not it should display the welcome screen.
         if cli[1]=="True": welcomeScreen()
     else: welcomeScreen()
     while True:
         clear()
-        grid, sample = getGameData()
-        p = Player()
-        play(grid, sample, p)
+        grid, sample = getGameData() #: gets the grid and sample size data
+        p = Player() #: initialise the player
+        play(grid, sample, p) #: begin to play
         if p.dead==True:
-            p.update(p.score)
+            p.update(p.score) #: update the current player score
             clear()
-        gameOver(p.score, p.best)
+        gameOver(p.score, p.best) #: shows the gameOver screen
