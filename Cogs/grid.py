@@ -30,7 +30,7 @@ class BlockOverlap(Exception):
 # -----------------------------------------
 # --- Get the grid
 # -----------------------------------------
-get_grid = lambda gtype, gsize: json.load(open(f'data/{gtype}.json'))[f"{gsize}"]
+get_grid = lambda gtype, gsize: json.load(open(f'data/grids.json'))[f"{gtype}"][f"{gsize}"]
 
 
 # -----------------------------------------
