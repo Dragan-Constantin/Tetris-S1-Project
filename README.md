@@ -33,7 +33,7 @@ python3 main.py
 If you intend to do multiple quick tests, you can also add the parameter `True` to skip the welcome screen:
 
 ```bash
-python3 main.py True
+python3 main.py False
 ```
 
 <br>
