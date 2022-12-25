@@ -101,7 +101,7 @@ def getGameData():
 if __name__=="__main__":
     cli = sys.argv #: gets the command line input from the terminal.
     if len(cli)>=2: #: checks whether or not it should display the welcome screen.
-        if cli[1]=="True": welcomeScreen()
+        if cli[1]!="False": welcomeScreen()
     else: welcomeScreen()
     while True:
         clear()
