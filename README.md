@@ -49,7 +49,9 @@ This program has been written under the following <a href="https://github.com/Dr
   <a href="https://www.linkedin.com/in/dragan-constantin" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Dragan-Constantin/myicons/main/linkedin-icon.png?token=AWLZ6NKTBE2KIUVET24RFFTB2RWYS">
   </a>
-<a href="constantin.dragan@efrei.net" target="_blank">
+<a href="mailto:constantin.dragan@efrei.net?cc=isabelle.somphone@efrei.net
+&subject=S1%20Programming%20Project%20(Tetris)
+&body=%0A-----------%0APlease%20indicate%20your%20name%20and%20surname%20and%20how%20you%20came%20to%20find%20this%20repository.%0AIf%20your%20are,%20or%20were,%20a%20student%20at%20EFREI,%20please%20indicate%20your%20class%20(along%20with%20the%20section)%0A%0AThank%20you%20in%20advance,%0AThis%20project's%20dev%20team.%0A-----------%0A%0A" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Ollianels/myicons/main/mail-icon.png">
   </a><br>
 <br>
