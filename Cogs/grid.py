@@ -99,25 +99,21 @@ def add_block(ogrid, block, score):
                     for j in range(len(cgrid[i])):
                         if len(block) > 1:
                             if j >= x and j <= (x + len(block[0]) - 1):
-                                # print(i, j, k, l)
                                 if cgrid[i][j]==0 and block[k][l]!=0: raise InvalidBlockPos
                                 else: cgrid[i][j]+=block[k][l]
                                 if l < (len(block[0]) - 1):
                                     l += 1
                         else:
                             if j >= x and j <= (x + len(block[0]) - 1):
-                                # print(i, j, k, l)
                                 if cgrid[i][j]==0 and block[k][l]!=0: raise InvalidBlockPos
                                 else: cgrid[i][j]+=block[k][l]
                                 if l <= len(block[0]):
                                     l += 1
                         if cgrid[i][j]>2:
-                            # print(down[i], top[j])
-                            cgrid[i][j] = 2 # reset the bloc to 2
+                            cgrid[i][j] = 2
                             raise BlockOverlap
                     k-=1
         res, score = check_grid(cgrid.copy(), score)
-        # res = cgrid
         return res, 0, score
     except (InvalidBlockPos, BlockOverlap) as e:
         print(e)
@@ -151,18 +147,16 @@ def show_grid(grid, sample, current_score, best_score):
     # display the grid in the terminal
     print("     ", end="")
     for i in range(0, len(d_grid[0])):
-        if i==len(d_grid[0])-1: print(top[i], end=f"\t\tYour Score: {current_score}\n")
+        if i==len(d_grid[0])-1: print(top[i], end=f"\t\t\tYour Score: {current_score}\n")
         else: print(top[i], end=" ")
     print("  |‾‾", end="")
     for i in range(0, len(d_grid[0])):
         if i==len(d_grid[0])-1: print(topline[i], end=f"‾‾|\t\tBest Score: {best_score}\n")
         else: print(topline[i], end="‾")
     for i in range(0, len(d_grid)):
-        a = i
         print(down[i], end=" ")
         print("|", end="  ")
         print(*d_grid[i], sep=" ", end="  |\n")
-        # print("|")
     print("  |", end="")
     for i in range(0, len(d_grid[0])): print("  ", end="")
     print("   |")

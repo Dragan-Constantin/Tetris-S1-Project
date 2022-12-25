@@ -2,7 +2,7 @@
 from Cogs.menus import *
 from Cogs.grid import *
 from Cogs.functions import *
-import time
+import sys
 
 
 # -----------------------------------------
@@ -54,16 +54,16 @@ def play(g, s, user):
 # --- Get the Game Data
 # -----------------------------------------
 def getGameData():
-    # grid_type, grid_size, bloc_display = ("diamond", 1, 1)
-    grid_type, grid_size, bloc_display = display_menu()
-    # var_display=f"\n   type: {grid_type}\n   size: {grid_size}\n   display: {bloc_display}"; print("mdata: {", var_display, "\n   }\n")
+    grid_type, grid_size, sample_size = display_menu()
     grid = get_grid(grid_type, grid_size)
-    sample_size = 3 if bloc_display == 1 else 10
     return grid, sample_size
 
 
 if __name__=="__main__":
-    welcomeScreen()
+    cli = sys.argv
+    if len(cli)>=2:
+        if cli[1]=="True": welcomeScreen()
+    else: welcomeScreen()
     while True:
         clear()
         grid, sample = getGameData()
@@ -73,6 +73,3 @@ if __name__=="__main__":
             p.update(p.score)
             clear()
         gameOver(p.score, p.best)
-
-    # display_blocks([[chosen_block]])
-    # singleBlock(chosen_block)
