@@ -10,7 +10,7 @@
 
 <h2 align="left">Downloads</h2>
 <p align="left">
-  • <a href="link" target="_blank">Latest release</a><br>
+  • <a href="link" target="_blank">Latest stable release</a><br>
   • <a href="https://github.com/Dragan-Constantin/Tetris-S1-Project" target="_blank">Latest nightly build</a><br>
 </p>
 
@@ -48,8 +48,15 @@ This program has been written under the following <a href="https://github.com/Dr
   • Dragan Constantin:
   <a href="https://www.linkedin.com/in/dragan-constantin" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Dragan-Constantin/myicons/main/linkedin-icon.png?token=AWLZ6NKTBE2KIUVET24RFFTB2RWYS">
+  </a>
+<a href="constantin.dragan@efrei.net" target="_blank">
+    <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Ollianels/myicons/main/mail-icon.png">
   </a><br>
+<br>
   • Somphone Isabelle:
   <a href="https://www.linkedin.com/in/isabelle-somphone-320258252/" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Dragan-Constantin/myicons/main/linkedin-icon.png?token=AWLZ6NKTBE2KIUVET24RFFTB2RWYS">
+  </a>
+<a href="isabelle.somphone@efrei.net" target="_blank">
+    <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Ollianels/myicons/main/mail-icon.png">
   </a><br>
