@@ -24,7 +24,7 @@ It was created as a part of the S1 programming project at <a href="https://eng.e
 <div style="text-aling: justify">
 To run the game, you need to have Python 3.10 installed on your machine. You can download it <a href="https://www.python.org/downloads/" target="_blank">here.</a><br>
 
-To install any needed module or library, you can use the following command in your prefered terminal.<br>
+<!--To install any needed module or library, you can use the following command in your prefered terminal.<br>
 You can use one of the following three commands :
 
 ```bash
@@ -36,7 +36,7 @@ python3 -m pip install -r requirements.py
 
 # Or:
 pip3 install -r requirements.py
-```
+```-->
 </div>
 
 ## 💿 Installation Guide
