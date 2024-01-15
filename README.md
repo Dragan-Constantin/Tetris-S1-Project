@@ -8,22 +8,49 @@
   <a href="https://github.com/Dragan-Constantin/Tetris-S1-Project" target="_blank"><img align="center" alt="Platforms" src="https://img.shields.io/badge/Platform-windows%20%20%7C%20%20linux-lightgrey?style=for-the-badge"></a>
 </p>
 
-<h2 align="left">Downloads</h2>
+## Downloads
 <p align="left">
   • <a href="link" target="_blank">Latest stable release</a><br>
   • <a href="https://github.com/Dragan-Constantin/Tetris-S1-Project" target="_blank">Latest nightly build</a><br>
 </p>
 
-<h2 align="left">About the game</h2>
+## About the game
 <div style="text-align: justify">
 This is a Text-based User Interface Tetris-like game written in Python 3.10.
-It was created as a part of the S1 programming project at <a href="https://eng.efrei.fr/" target="_blank">EFREI Paris.</a><br>
-<ins><b>Fair Warning:</b></ins> This game is still in development and is prone to regular changes. Additionally, there are no garanties that this program will work on your machine.</div>
+It was created as a part of the S1 programming project at <a href="https://eng.efrei.fr/" target="_blank">EFREI Paris.</a><br><br>
+<ins><b>Fair Warning:</b></ins> This game is not in development anymore and will not be maintained</div>
 
-<h2 align="left">Usage</h2>
+## Pre-requisites
+<div style="text-aling: justify">
+To run the game, you need to have Python 3.10 installed on your machine. You can download it <a href="https://www.python.org/downloads/" target="_blank">here.</a><br>
+
+To install any needed module or library, you can use the following command in your prefered terminal.<br>
+You can use one of the following three commands :
+
+```bash
+# To install the requirements do: 
+pip install -r requirements.py
+
+# If you want to make sure pip is using python3, you can do this:
+python3 -m pip install -r requirements.py
+
+# Or:
+pip3 install -r requirements.py
+```
+</div>
+
+## 💿 Installation Guide
+To install the game, you can either clone the repository 
+```git
+git clone https://github.com/Dragan-Constantin/Tetris-S1-Project
+```
+
+Or install it in one of the links above in the [Downloads](Downloads) section.
+
+## 🕹️ Usage
 <div style="text-align: justify">
-To run the program, you need to have Python 3.10 installed on your machine. You can download it <a href="https://www.python.org/downloads/" target="_blank">here.</a><br>
-Then, you can either run the executable, run the Python script `main.py` as an executable, or open a terminal and type the following command:</div><br>
+To play this game, you can either run the executable, run the Python script `main.py` as an executable, or open a terminal and type the following command:
+</div><br>
 
 ```bash
 python3 main.py
@@ -49,17 +76,17 @@ This program has been written under the following <a href="https://github.com/Dr
   <a href="https://www.linkedin.com/in/dragan-constantin" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Dragan-Constantin/myicons/main/linkedin-icon.png?token=AWLZ6NKTBE2KIUVET24RFFTB2RWYS">
   </a>
-<a href="mailto:constantin.dragan@efrei.net?cc=samuel.poinama@efrei.net
+<a href="mailto:constantin.dragan@efrei.net?cc=isabelle.somphone@efrei.net
 &subject=S1%20Programming%20Project%20(Tetris)
 &body=%0A-----------%0APlease%20indicate%20your%20name%20and%20surname%20and%20how%20you%20came%20to%20find%20this%20repository.%0AIf%20your%20are,%20or%20were,%20a%20student%20at%20EFREI,%20please%20indicate%20your%20class%20(along%20with%20the%20section)%0A%0AThank%20you%20in%20advance,%0AThis%20project's%20dev%20team.%0A-----------%0A%0A" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Ollianels/myicons/main/mail-icon.png">
   </a><br>
 <br>
   • Somphone Isabelle:
-  <a href="https://www.linkedin.com/in/samuel-poinama-428827222/" target="_blank">
+  <a href="https://www.linkedin.com/in/isabelle-somphone-320258252" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Dragan-Constantin/myicons/main/linkedin-icon.png?token=AWLZ6NKTBE2KIUVET24RFFTB2RWYS">
   </a>
-<a href="mailto:samuel.poinama@efrei.net?cc=constantin.dragan@efrei.net
+<a href="mailto:isabelle.somphone@efrei.net?cc=constantin.dragan@efrei.net
 &subject=S1%20Programming%20Project%20(Tetris)
 &body=%0A-----------%0APlease%20indicate%20your%20name%20and%20surname%20and%20how%20you%20came%20to%20find%20this%20repository.%0AIf%20your%20are,%20or%20were,%20a%20student%20at%20EFREI,%20please%20indicate%20your%20class%20(along%20with%20the%20section)%0A%0AThank%20you%20in%20advance,%0AThis%20project's%20dev%20team.%0A-----------%0A%0A" target="_blank">
     <img align="center" alt="LinkedIn Profile" width="16px" src="https://raw.githubusercontent.com/Ollianels/myicons/main/mail-icon.png">
