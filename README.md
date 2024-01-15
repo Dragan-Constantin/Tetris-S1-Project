@@ -45,7 +45,7 @@ To install the game, you can either clone the repository
 git clone https://github.com/Dragan-Constantin/Tetris-S1-Project
 ```
 
-Or install it in one of the links above in the [Downloads](Downloads) section.
+Or install it in one of the links above in the [Downloads](README.md#Downloads) section.
 
 ## 🕹️ Usage
 <div style="text-align: justify">
